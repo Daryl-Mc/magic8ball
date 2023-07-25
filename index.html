@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Karla Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Kanit:ital,wght@1,300&family=Karla&family=Sofia+Sans:wght@200&family=Unbounded:wght@300&display=swap" rel="stylesheet">
+    <!--CSS Connect-->
+    <link rel ="stylesheet" href="style.css">
+</head>
+<body class ="lightmode">
+    <div class="ball">
+        <div class ="whitespace">
+            <p class="response"> 8 </p>
+        </div>
+    </div>
+    <div class="inputfield">
+        <input type="text" name="" id="question" placeholder="How can I help?">
+        <button onclick ="askQuestion()" id="input"> Submit </button>
+    </div>
+    <span class="output"> Output: </span>
+    <button class = "switch" onclick = "toggleMode()"> OFF </button>
+    <!--<label class="switch"> Start of a slider switch.
+        <input type="checkbox">
+        <span class ="slider round"> </span>    
+    </label>-->
+    <button class = "random" onclick = "randomQuestion()"> Random Question </button>
+    <button class = "reset" onclick = "clearOutput()"> Clear </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
