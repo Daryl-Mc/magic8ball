@@ -78,11 +78,14 @@ button{
 .output{
     text-align: left;
     position:absolute;
-    left: 50px;
+    left: 30px;
     top: 300px;
     font-weight: bolder;
     font-size: 15px;
     max-width: 500px;
+    border: solid 2px;
+    min-width:400px;
+    min-height: 200px;
 }
 
 .switch{
@@ -100,7 +103,7 @@ button{
 
 .reset{
     position: absolute;
-    top: 60vh;
+    top: 53vh;
     left: 2vw;
     padding: 1px 20px 1px 20px;
 }
