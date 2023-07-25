@@ -79,7 +79,7 @@ function setPlaceholder(){
         "Ask anything your heart desires",
         "What is weighing on your mind?",
         "What may I clarify today?",
-        "Allow me to pull back the veil.",
+        "Allow me to show you the truth.",
         "All may become clear with one question.",
         "You are indecisive, let me help.",
     ]
@@ -111,6 +111,8 @@ function randomQuestion(){
         "Should I play Valorant today?",
         "Should I go to the gym today?",
         "Do you see a girlfriend in my future?",
+        "Do you see good fortune ahead?",
+        "Should I have tea today?",
     ];
 
     let questionIndex = randomize(questionsArr)
