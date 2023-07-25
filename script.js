@@ -73,20 +73,6 @@ function askQuestion(){
     }
 }
 
-// Give the question field a random placeholder each time its typed in.
-function setPlaceholder(){
-    let placeholders = [
-        "Ask anything your heart desires",
-        "What is weighing on your mind?",
-        "What may I clarify today?",
-        "Allow me to show you the truth.",
-        "All may become clear with one question.",
-        "You are indecisive, let me help.",
-    ]
-        let placeholderIndex = randomize(placeholders);
-        textBox.placeholder = placeholders[placeholderIndex];
-}
-
 // Checks for the textbox to be accessed, and calls the function.
 textBox.addEventListener("focus", setPlaceholder)
 
@@ -102,23 +88,6 @@ function toggleMode(){
     }
 }
 
-//Generates a random question for the user to input.
-function randomQuestion(){
-    let questionsArr = [
-        "Should I have steak today?",
-        "Will I get super powers soon?",
-        "Will Naruto ever be the main character again?",
-        "Should I play Valorant today?",
-        "Should I go to the gym today?",
-        "Do you see a girlfriend in my future?",
-        "Do you see good fortune ahead?",
-        "Should I have tea today?",
-    ];
-
-    let questionIndex = randomize(questionsArr)
-    textBox.value = questionsArr[questionIndex]
-}
-
 // Clears the output tab when the button is clicked.
 function clearOutput(){
     const nodeArr = Array.from(output.childNodes)
@@ -126,4 +95,36 @@ function clearOutput(){
         nodeArr[i].remove();
     }
 }
+
+//Generates a random question for the user to input.
+function randomQuestion(){
+    let questionsArr = [
+        "Should I have steak today?",
+        "Will I get super powers soon?",
+        "Should I play Valorant today?",
+        "Should I go to the gym today?",
+        "Do you see good fortune ahead?",
+        "Should I have tea today?",
+        "Is my love life looking good?",
+        "Should I take a walk today?",
+    ];
+
+    let questionIndex = randomize(questionsArr)
+    textBox.value = questionsArr[questionIndex]
+}
+
+// Give the question field a random placeholder each time its typed in.
+function setPlaceholder(){
+    let placeholders = [
+        "Ask anything your heart desires",
+        "What is weighing on your mind?",
+        "What may I clarify today?",
+        "Allow me to show you the truth.",
+        "All may become clear with one question.",
+        "You are indecisive, let me help.",
+    ]
+        let placeholderIndex = randomize(placeholders);
+        textBox.placeholder = placeholders[placeholderIndex];
+}
+
 
