@@ -1,6 +1,5 @@
 const textBox = document.getElementById("question");
 const input = document.getElementById("input");
-//const ballDiv = document.querySelector(".ball");
 const output = document.querySelector(".output");
 let timerId;
 
@@ -26,8 +25,8 @@ function addQuestion(query, response) {
     div.textContent = `${query}  :  ${response}`;
     output.appendChild(div);
 
-    //removes the first child if there are more than 9 elements inside output
-    if(output.childElementCount > 9){
+    //removes the first child if there are more than 15 elements inside output
+    if(output.childElementCount > 15){
         //console.log("longer!")
         output.childNodes[1].remove()
     }
@@ -39,12 +38,16 @@ function askQuestion(){
         "No",
         "Yes",
         "Wouldn't Count on It", 
-        "Did the Chicken Cross the Road?", 
+        "Ask another time.", 
         "Why would you ask that?", 
         "Ask Again Later", 
         "No Way.", 
         "Think about it and ask again later.", 
         "Not in this lifetime.",
+        "Give me some time, then ask again.",
+        "Surely.",
+        "Without a doubt.",
+
         ];
     const answer = document.querySelector(".response"); 
     const question = textBox.value;
@@ -60,7 +63,7 @@ function askQuestion(){
         //Assign the random text to the response and add styling
         let response = magic8ball[randomIndex];
         answer.textContent = response;
-        answer.style.cssText = "font-size: 25px; font-weight: bold; text-align: center;"; //More consice way to add all the styles to the new element. 
+        answer.style.cssText = "font-size: 25px; font-weight: bold; text-align: center; color: green;"; //More consice way to add all the styles to the new element. 
         answer.style.display = "block"; // Making the answer visible
         textBox.value = "";
 
@@ -72,9 +75,6 @@ function askQuestion(){
         timerId = setTimeout(resetAnswer, 8000);
     }
 }
-
-// Checks for the textbox to be accessed, and calls the function.
-textBox.addEventListener("focus", setPlaceholder)
 
 // Handles toggling between light and dark mode on webpage.
 function toggleMode(){
@@ -126,5 +126,8 @@ function setPlaceholder(){
         let placeholderIndex = randomize(placeholders);
         textBox.placeholder = placeholders[placeholderIndex];
 }
+
+// Checks for the textbox to be accessed, and calls the function.
+textBox.addEventListener("focus", setPlaceholder)
 
 
